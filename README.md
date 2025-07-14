@@ -5,9 +5,9 @@ Além disso, mostra no console estatísticas como a média da latência, quantos
 
 #### Ajuda a responder perguntas como:
 "Meu site está respondendo rápido?"
-"A latência da minha internet está estável?"
-"Alguma URL está fora do ar ou demorando para responder?"
-"Qual serviço tem melhor desempenho: Google, Bing ou DuckDuckGo?"
+, "A latência da minha internet está estável?"
+, "Alguma URL está fora do ar ou demorando para responder?"
+, "Qual serviço tem melhor desempenho: Google, Bing ou DuckDuckGo?"
 
 
 # Funcionalidades
@@ -36,7 +36,9 @@ Para rodar o programa, você precisa ter:
 
 # Saídas do Programa
   Console: tempo de resposta e estatísticas (média, total de testes, falhas).
+  
   latencia_testes.csv: dados brutos (horário, URL, tempo, status).
+  
   latencia_grafico.png: gráfico de linha mostrando a latência ao longo do tempo.
 
 # Estrutura do Projeto
