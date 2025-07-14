@@ -1,4 +1,4 @@
-#📡 Monitor de Latência de Sites
+#Monitor de Latência de Sites
 Este projeto mede quanto tempo (latência) um site demora para responder.  
 Ele salva esses tempos em um arquivo e também cria um gráfico mostrando essa informação ao longo do tempo.  
 Além disso, mostra no console estatísticas como a média da latência, quantos testes foram feitos e quantos falharam.
@@ -55,7 +55,7 @@ Intervalo entre testes: 5 segundos
 Número de testes por URL: 3
 Arquivos gerados: latencia_testes.csv e latencia_grafico.png
 
-#🧪 Exemplo de Saída
+#Exemplo de Saída
     [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200
     [2025-07-10 20:01:05] https://www.google.com: Tempo de acesso: 407.16 ms | HTTP 200
     [2025-07-10 20:01:10] https://www.google.com: Tempo de acesso: 377.50 ms | HTTP 200
