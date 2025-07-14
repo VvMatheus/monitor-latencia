@@ -1,10 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def calcular_estatisticas(df):
-
-    #Calcula estatísticas por URL
-
+def calcular_estatisticas(df): # calcula estatisticas por URL
+    
     estatisticas = {}
     urls = df['URL'].unique()
 
@@ -18,32 +16,21 @@ def calcular_estatisticas(df):
             media = round(tempo_float.mean(), 2)
         else:
             media = "N/A"
-
-        estatisticas[url] = {
-            'Média (ms)': media,
-            'Total de Testes': len(dados_url),
-            'Falhas': len(total_falhas)
-        }
-
+        estatisticas[url] = {'Média (ms)': media,'Total de Testes': len(dados_url),'Falhas': len(total_falhas)}
     return estatisticas
 
-def plotar_grafico(df, arquivo_csv):
-    
-    #Gera e exibe um gráfico de linha com a latência por URL ao longo do tempo.
-    
+def plotar_grafico(df, arquivo_csv): # gera e exibe um grafico de linha com a latencia por URL ao longo do tempo.
     try:
-        #apenas dados válidos (sem erro)
+        #apenas dados validos (sem erro)
         df_valido = df[df['Tempo_ms'] != "Erro"].copy()
         df_valido['Tempo_ms'] = df_valido['Tempo_ms'].astype(float)
 
         if df_valido.empty:
             print("Nenhum dado válido no CSV para gerar o gráfico.")
             return
-
-        #dados por horário para garantir gráfico correto
+        #dados por horário para garantir grafico correto
         df_valido = df_valido.sort_values("Horario")
-
-        #gráfico
+        #grafico
         plt.figure(figsize=(10, 6))
         for url in df_valido['URL'].unique():
             dados_url = df_valido[df_valido['URL'] == url]
