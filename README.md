@@ -35,25 +35,25 @@ Para rodar o programa, você precisa ter:
 5. Digite as URLs separadas por vírgula quando o programa pedir.
 
 # Saídas do Programa
-Console: tempo de resposta e estatísticas (média, total de testes, falhas).
-latencia_testes.csv: dados brutos (horário, URL, tempo, status).
-latencia_grafico.png: gráfico de linha mostrando a latência ao longo do tempo.
+  Console: tempo de resposta e estatísticas (média, total de testes, falhas).
+  latencia_testes.csv: dados brutos (horário, URL, tempo, status).
+  latencia_grafico.png: gráfico de linha mostrando a latência ao longo do tempo.
 
 # Estrutura do Projeto
-  monitor-latencia/
-  monitor.py               # Script principal
-  requirements.txt         # Bibliotecas necessárias
-  README.md                # Instruções e documentação
-  .gitignore               # Arquivos ignorados pelo Git
-  modulos/                 # Módulos do projeto
-    medir_latencia.py    # Mede o tempo de acesso às URLs
-    salvar_dados.py      # Salva os dados no CSV
-    gerar_grafico.py     # Gera o gráfico e estatísticas
+monitor-latencia/
+monitor.py               # Script principal
+requirements.txt         # Bibliotecas necessárias
+README.md                # Instruções e documentação
+.gitignore               # Arquivos ignorados pelo Git
+modulos/                 # Módulos do projeto
+  medir_latencia.py    # Mede o tempo de acesso às URLs
+  salvar_dados.py      # Salva os dados no CSV
+  gerar_grafico.py     # Gera o gráfico e estatísticas
 
 # Configurações
-Intervalo entre testes: 5 segundos
-Número de testes por URL: 3
-Arquivos gerados: latencia_testes.csv e latencia_grafico.png
+  Intervalo entre testes: 5 segundos.
+  Número de testes por URL: 3.
+  Arquivos gerados: latencia_testes.csv e latencia_grafico.png.
 
 # Exemplo de Saída
   [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200
