@@ -1,20 +1,16 @@
 import os
 import csv
 
-def salvar_dados(dados, arquivo_csv):
-    
-    #Salva os dados de monitoramento no arquivo CSV.
-
+def salvar_dados(dados, arquivo_csv): # salva os dados de monitoramento no arquivo CSV.
     arquivo_existe = os.path.isfile(arquivo_csv)
 
     with open(arquivo_csv, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-
-        # Escreve o cabeçalho apenas se o arquivo ainda não existe
+        # escreve o cabeçalho apenas se o arquivo ainda não existe
         if not arquivo_existe:
             writer.writerow(["Horario", "URL", "Tempo_ms", "Status_HTTP"])
-
-        # Escreve os dados
+        
+        # escreve os dados
         for dado in dados:
             horario = dado.get("horario", "N/A")
             url = dado.get("url", "N/A")
