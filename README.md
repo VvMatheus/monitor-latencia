@@ -58,20 +58,20 @@ modulos/                 # Módulos do projeto
   Arquivos gerados: latencia_testes.csv e latencia_grafico.png.
 
 # Exemplo de Saída
-  [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200
-  [2025-07-10 20:01:05] https://www.google.com: Tempo de acesso: 407.16 ms | HTTP 200
-  [2025-07-10 20:01:10] https://www.google.com: Tempo de acesso: 377.50 ms | HTTP 200
+  [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200  
+  [2025-07-10 20:01:05] https://www.google.com: Tempo de acesso: 407.16 ms | HTTP 200  
+  [2025-07-10 20:01:10] https://www.google.com: Tempo de acesso: 377.50 ms | HTTP 200  
     
-  Estatísticas dos testes:
-  https://www.google.com:
-    Média (ms): 441.1
-    Total de Testes: 3
-    Falhas: 0
+  Estatísticas dos testes:  
+  https://www.google.com:  
+    Média (ms): 441.1  
+    Total de Testes: 3  
+    Falhas: 0  
       
-  Gráfico salvo como: latencia_grafico.png
+  Gráfico salvo como: latencia_grafico.png  
 
 # Dica
-Se quiser apagar os dados e começar do zero, exclua os arquivos:
-  latencia_testes.csv
-  latencia_grafico.png
+Se quiser apagar os dados e começar do zero, exclua os arquivos:  
+  latencia_testes.csv  
+  latencia_grafico.png  
 
