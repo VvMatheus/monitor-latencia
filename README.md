@@ -3,7 +3,7 @@ Este projeto mede quanto tempo (latência) um site demora para responder.
 Ele salva esses tempos em um arquivo e também cria um gráfico mostrando essa informação ao longo do tempo.  
 Além disso, mostra no console estatísticas como a média da latência, quantos testes foram feitos e quantos falharam.
 
-## Ajuda a responder perguntas como:
+#### Ajuda a responder perguntas como:
 "Meu site está respondendo rápido?"
 "A latência da minha internet está estável?"
 "Alguma URL está fora do ar ou demorando para responder?"
@@ -21,18 +21,18 @@ Além disso, mostra no console estatísticas como a média da latência, quantos
 
 # Pré-requisitos
 Para rodar o programa, você precisa ter:
-- Python 3.6 ou superior instalado.
-- As bibliotecas: requests, pandas, matplotlib
+- Python 3.9 ou superior instalado.
+- As bibliotecas: requests, pandas e matplotlib.
 
 # Como Usar
-## 1.Baixe ou clone o projeto do GitHub.
-## 2.Entre na pasta do projeto:
+1. Baixe ou clone o projeto do GitHub.
+2. Entre na pasta do projeto:
   cd monitor-latencia
-## 3.Instale as dependências:
+3. Instale as dependências:
   pip install -r requirements.txt
-## 4.Execute o programa:
+4. Execute o programa:
   python monitor.py
-## 5.Digite as URLs separadas por vírgula quando o programa pedir.
+5. Digite as URLs separadas por vírgula quando o programa pedir.
 
 # Saídas do Programa
 Console: tempo de resposta e estatísticas (média, total de testes, falhas).
