@@ -1,74 +1,75 @@
-Monitor de Latência de Sites
-Este projeto monitora o tempo de resposta (latência) de sites, salva os resultados em um arquivo CSV e gera um gráfico de linha com o histórico de latência. As estatísticas (média, total de testes e falhas) são exibidas no console.
-Funcionalidades
+#📡 Monitor de Latência de Sites
+Este projeto mede quanto tempo (latência) um site demora para responder.  
+Ele salva esses tempos em um arquivo e também cria um gráfico mostrando essa informação ao longo do tempo.  
+Além disso, mostra no console estatísticas como a média da latência, quantos testes foram feitos e quantos falharam.
 
-Mede a latência de URLs (em milissegundos) a cada 5 segundos.
-Salva os dados em latencia_testes.csv.
-Exibe no console: média de latência, total de testes e número de falhas.
-Gera um gráfico de linha limpo em latencia_grafico.png.
-
-Pré-requisitos
-
-Python 3.6 ou superior
-Bibliotecas: requests, pandas, matplotlib
-Instale as dependências com: pip install -r requirements.txt
+##Ajuda a responder perguntas como:
+"Meu site está respondendo rápido?"
+"A latência da minha internet está estável?"
+"Alguma URL está fora do ar ou demorando para responder?"
+"Qual serviço tem melhor desempenho: Google, Bing ou DuckDuckGo?"
 
 
+#Funcionalidades
+- Mede o tempo de resposta das URLs que você escolher a cada 5 segundos.
+- Salva os resultados em um arquivo chamado 'latencia_testes.csv'.
+- Mostra no console:
+  - A média dos tempos medidos.
+  - Quantos testes foram feitos.
+  - Quantos testes deram erro.
+- Cria um gráfico ('latencia_grafico.png') mostrando a latência ao longo do tempo.
 
-Como Usar
+#Pré-requisitos
+Para rodar o programa, você precisa ter:
+- Python 3.6 ou superior instalado.
+- As bibliotecas: requests, pandas, matplotlib
 
-Clone o repositório:git clone https://github.com/SEU_USUARIO/monitor-latencia.git
-cd monitor-latencia
+#Como Usar
+##1.Baixe ou clone o projeto do GitHub.
+##2.Entre na pasta do projeto:
+  cd monitor-latencia
+##3.Instale as dependências:
+  pip install -r requirements.txt
+##4.Execute o programa:
+  python monitor.py
+##5.Digite as URLs separadas por vírgula quando o programa pedir.
 
+#Saídas do Programa
+Console: tempo de resposta e estatísticas (média, total de testes, falhas).
+latencia_testes.csv: dados brutos (horário, URL, tempo, status).
+latencia_grafico.png: gráfico de linha mostrando a latência ao longo do tempo.
 
-Instale as dependências:pip install -r requirements.txt
+#Estrutura do Projeto
+  monitor-latencia/
+  monitor.py               # Script principal
+  requirements.txt         # Bibliotecas necessárias
+  README.md                # Instruções e documentação
+  .gitignore               # Arquivos ignorados pelo Git
+  modulos/                 # Módulos do projeto
+    medir_latencia.py    # Mede o tempo de acesso às URLs
+    salvar_dados.py      # Salva os dados no CSV
+    gerar_grafico.py     # Gera o gráfico e estatísticas
 
-
-Execute o programa:python monitor.py
-
-
-Insira as URLs para testar (ex. https://www.google.com,https://www.example.com), separadas por vírgula.
-Veja os resultados:
-Console: Latências por teste e estatísticas (média, total de testes, falhas).
-Arquivos:
-latencia_testes.csv: Dados brutos (horário, URL, tempo, status HTTP).
-latencia_grafico.png: Gráfico de linha com histórico de latência.
-
-
-
-
-
-Estrutura do Projeto
-
-monitor.py: Script principal que coordena o monitoramento, salvamento e geração de gráficos.
-  modulos/
-  medir_latencia.py: Mede o tempo de acesso às URLs.
-  salvar_dados.py: Salva os dados no arquivo CSV.
-  gerar_grafico.py: Gera o gráfico de linha e calcula estatísticas.
-
-
-
-Configurações
-
+#Configurações
 Intervalo entre testes: 5 segundos
 Número de testes por URL: 3
-Saídas: latencia_testes.csv, latencia_grafico.png
+Arquivos gerados: latencia_testes.csv e latencia_grafico.png
 
-Exemplo de Saída
-Ao executar python monitor.py e inserir https://www.google.com:
-Diretório de trabalho atual: C:\Users\verda\monitor-latencia
-Digite as URLs para testar (separadas por vírgula): https://www.google.com
-Monitorando 1 URLs a cada 5 segundos. Executando 3 testes.
-[2025-07-13 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200
-[2025-07-13 20:01:05] https://www.google.com: Tempo de acesso: 407.16 ms | HTTP 200
-[2025-07-13 20:01:10] https://www.google.com: Tempo de acesso: 377.50 ms | HTTP 200
-Testes concluídos. Gerando gráfico...
+#🧪 Exemplo de Saída
+    [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200
+    [2025-07-10 20:01:05] https://www.google.com: Tempo de acesso: 407.16 ms | HTTP 200
+    [2025-07-10 20:01:10] https://www.google.com: Tempo de acesso: 377.50 ms | HTTP 200
+    
+    Estatísticas dos testes:
+    https://www.google.com:
+      Média (ms): 441.1
+      Total de Testes: 3
+      Falhas: 0
+      
+    Gráfico salvo como: latencia_grafico.png
 
-Estatísticas dos testes:
-https://www.google.com:
-  Média (ms): 441.1
-  Total de Testes: 3
-  Falhas: 0
+#Dica
+Se quiser apagar os dados e começar do zero, exclua os arquivos:
+  latencia_testes.csv
+  latencia_grafico.png
 
-Gráfico salvo como: latencia_grafico.png
-Dados salvos em: C:\Users\x\monitor-latencia\latencia_testes.csv
