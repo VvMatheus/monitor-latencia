@@ -53,9 +53,9 @@ modulos/                 # Módulos do projeto
   gerar_grafico.py     # Gera o gráfico e estatísticas  
 
 # Configurações
-  Intervalo entre testes: 5 segundos.
-  Número de testes por URL: 3.
-  Arquivos gerados: latencia_testes.csv e latencia_grafico.png.
+  Intervalo entre testes: 5 segundos.  
+  Número de testes por URL: 3.  
+  Arquivos gerados: latencia_testes.csv e latencia_grafico.png.  
 
 # Exemplo de Saída
   [2025-07-10 20:01:00] https://www.google.com: Tempo de acesso: 538.63 ms | HTTP 200  
