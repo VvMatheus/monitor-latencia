@@ -4,10 +4,10 @@ Ele salva esses tempos em um arquivo e também cria um gráfico mostrando essa i
 Além disso, mostra no console estatísticas como a média da latência, quantos testes foram feitos e quantos falharam.
 
 #### Ajuda a responder perguntas como:
-"Meu site está respondendo rápido?"
-, "A latência da minha internet está estável?"
-, "Alguma URL está fora do ar ou demorando para responder?"
-, "Qual serviço tem melhor desempenho: Google, Bing ou DuckDuckGo?"
+"Meu site está respondendo rápido?"  
+"A latência da minha internet está estável?"  
+"Alguma URL está fora do ar ou demorando para responder?"  
+"Qual serviço tem melhor desempenho: Google, Bing ou DuckDuckGo?"  
 
 
 # Funcionalidades
@@ -42,15 +42,15 @@ Para rodar o programa, você precisa ter:
   latencia_grafico.png: gráfico de linha mostrando a latência ao longo do tempo.
 
 # Estrutura do Projeto
-monitor-latencia/
-monitor.py               # Script principal
-requirements.txt         # Bibliotecas necessárias
-README.md                # Instruções e documentação
-.gitignore               # Arquivos ignorados pelo Git
-modulos/                 # Módulos do projeto
-  medir_latencia.py    # Mede o tempo de acesso às URLs
-  salvar_dados.py      # Salva os dados no CSV
-  gerar_grafico.py     # Gera o gráfico e estatísticas
+monitor-latencia/  
+monitor.py               # Script principal  
+requirements.txt         # Bibliotecas necessárias  
+README.md                # Instruções e documentação  
+.gitignore               # Arquivos ignorados pelo Git  
+modulos/                 # Módulos do projeto  
+  medir_latencia.py    # Mede o tempo de acesso às URLs  
+  salvar_dados.py      # Salva os dados no CSV  
+  gerar_grafico.py     # Gera o gráfico e estatísticas  
 
 # Configurações
   Intervalo entre testes: 5 segundos.
